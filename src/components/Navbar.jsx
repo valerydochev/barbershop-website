@@ -11,7 +11,6 @@ const navItems = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
-  // затваря менюто при ESC
   useEffect(() => {
     const onKeyDown = (e) => {
       if (e.key === "Escape") setOpen(false);
@@ -20,7 +19,6 @@ export default function Navbar() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
 
-  // спира скрол-а на body докато е отворено
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => (document.body.style.overflow = "");
@@ -30,11 +28,12 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
+      
       <div className="bg-black/70 backdrop-blur-md border-b border-white/10">
         <div className="mx-auto max-w-7xl px-6">
           <div className="h-16 flex items-center justify-between">
-            {/* LEFT – LOGO */}
-            <a href="#home" className="flex items-center gap-3" onClick={close}>
+
+            <a href="#home" onClick={close} className="flex items-center gap-3">
               <div className="bg-white rounded-xl p-2">
                 <img src={logo} alt="Kuzev Cuts" className="h-10 w-auto" />
               </div>
@@ -46,7 +45,6 @@ export default function Navbar() {
               </div>
             </a>
 
-            {/* CENTER – DESKTOP MENU */}
             <nav className="hidden md:flex gap-8 text-sm font-semibold tracking-widest">
               {navItems.map((item) => (
                 <a
@@ -59,7 +57,6 @@ export default function Navbar() {
               ))}
             </nav>
 
-            {/* RIGHT – DESKTOP CTA */}
             <a
               href="#map"
               className="hidden md:flex items-center justify-center
@@ -70,7 +67,7 @@ export default function Navbar() {
               ВИЖ КЪДЕ
             </a>
 
-            {/* MOBILE – BURGER */}
+            {/* BURGER */}
             <button
               type="button"
               className="md:hidden inline-flex items-center justify-center h-10 w-10
@@ -79,7 +76,6 @@ export default function Navbar() {
               aria-expanded={open}
               onClick={() => setOpen(true)}
             >
-              {/* icon */}
               <span className="block w-5">
                 <span className="block h-[2px] bg-white/90" />
                 <span className="block h-[2px] bg-white/70 mt-1.5" />
@@ -90,14 +86,14 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* MOBILE OVERLAY */}
+      {/* MOBILE MENU */}
       <div
         className={`md:hidden fixed inset-0 z-50 transition ${
           open ? "pointer-events-auto" : "pointer-events-none"
         }`}
         aria-hidden={!open}
       >
-        {/* backdrop */}
+
         <div
           className={`absolute inset-0 bg-black/60 transition-opacity ${
             open ? "opacity-100" : "opacity-0"
@@ -105,7 +101,6 @@ export default function Navbar() {
           onClick={close}
         />
 
-        {/* drawer */}
         <div
           className={`absolute top-0 right-0 h-full w-[86%] max-w-sm
                       bg-black/90 backdrop-blur-md border-l border-white/10
@@ -118,23 +113,22 @@ export default function Navbar() {
             </p>
             <button
               type="button"
+              onClick={close}
               className="h-10 w-10 inline-flex items-center justify-center
                          border border-white/20 hover:border-white/40 rounded-lg transition"
-              aria-label="Close menu"
-              onClick={close}
             >
-              <span className="text-white/90 text-xl leading-none">×</span>
+              <span className="text-white text-xl">×</span>
             </button>
           </div>
 
-          <nav className="px-6 py-6 flex flex-col gap-4">
+          <nav className="px-6 py-6 flex flex-col">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={close}
-                className="py-3 border-b border-white/10
-                           text-white/90 font-semibold tracking-widest text-sm
+                className="py-4
+                           text-white/70 font-semibold tracking-widest text-sm
                            hover:text-white transition"
               >
                 {item.label}
@@ -144,7 +138,7 @@ export default function Navbar() {
             <a
               href="#map"
               onClick={close}
-              className="mt-4 h-11 px-6 inline-flex items-center justify-center
+              className="mt-6 h-11 px-6 inline-flex items-center justify-center
                          border border-white/30 text-white font-semibold tracking-widest text-xs
                          hover:border-white hover:bg-white/5 transition"
             >
