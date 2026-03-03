@@ -1,5 +1,6 @@
 import Hero from "./components/Hero";
 import Navbar from "./Components/Navbar";
+import Services from "./components/Services";
 
 export default function App() {
   return (
@@ -7,6 +8,7 @@ export default function App() {
       <Navbar />
       <main className="pt-16">
         <Hero />
+        <Services />
       </main>
     </div>
   );
