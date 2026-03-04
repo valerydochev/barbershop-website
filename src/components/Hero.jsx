@@ -2,8 +2,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden
-                 min-h-[52vh] md:min-h-[80vh] lg:min-h-[70vh] lg:min-h-[520px]"
+      className="relative overflow-hidden min-h-[52vh] md:min-h-[80vh] lg:min-h-[520px]"
     >
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-zinc-900 to-black" />
@@ -22,7 +21,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-7xl px-6 h-full">
         <div
-          className="min-h-[52vh] md:min-h-[80vh] lg:min-h-[70vh] lg:min-h-[520px]
+          className="min-h-[52vh] md:min-h-[80vh] lg:min-h-[520px]
                      flex items-start lg:items-center
                      pt-10 sm:pt-12 lg:pt-0"
         >
@@ -45,38 +44,44 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll Arrow */}
+      {/* Desktop arrow */}
       <a
         href="#services"
-        className="hidden lg:flex absolute bottom-10 left-1/2 -translate-x-1/2 z-20
-             items-center justify-center
-             h-10 w-10 rounded-full border border-white/15
-             text-white/60 hover:text-white hover:border-white/30
-             transition"
+        className="hidden lg:flex absolute bottom-20 z-20
+             left-6 lg:left-[max(1.5rem,calc((100vw-80rem)/2+1.5rem))]
+             items-center gap-3
+             text-white/60 hover:text-white transition"
         aria-label="Scroll to services"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-5 h-5"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth="2"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M19 9l-7 7-7-7"
-          />
-        </svg>
-      </a>
+        {/* <span className="text-xs tracking-[0.28em] uppercase">Скрол</span> */}
 
+        <span
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/
+                   hover:border-white/30 transition hover:bg-white/10"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-5 h-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </span>
+      </a>
+      {/* Mobile arrow */}
       <a
         href="#services"
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20
-             flex flex-col items-center gap-2
-             text-white/60 hover:text-white transition
-             lg:hidden"
+                   flex flex-col items-center gap-2
+                   text-white/60 hover:text-white transition
+                   lg:hidden"
       >
         <span className="text-xs tracking-[0.3em] uppercase">Скрол</span>
 
