@@ -1,3 +1,27 @@
+import { useEffect, useRef, useState } from "react";
+
+function useInView(options = { threshold: 0.15, rootMargin: "0px 0px -10% 0px" }) {
+  const ref = useRef(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const obs = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setInView(true);
+        obs.disconnect();
+      }
+    }, options);
+
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [options]);
+
+  return [ref, inView];
+}
+
 export default function Services() {
   const services = [
     {
@@ -18,14 +42,17 @@ export default function Services() {
     },
   ];
 
+  const [sectionRef, inView] = useInView();
+
   return (
-    <section
-      id="services"
-      className="scroll-mt-16 bg-black py-28"
-    >
-      <div className="mx-auto max-w-7xl px-6">
-        
-        <div className="mb-20">
+    <section id="services" className="scroll-mt-16 bg-black py-24 md:py-28">
+      <div ref={sectionRef} className="mx-auto max-w-7xl px-6">
+        <div
+          className={[
+            "mb-16 md:mb-20 transition-all duration-700 ease-out",
+            inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6",
+          ].join(" ")}
+        >
           <h2 className="text-3xl md:text-4xl font-bold tracking-widest text-white">
             НАШИТЕ УСЛУГИ
           </h2>
@@ -36,24 +63,18 @@ export default function Services() {
           {services.map((service, i) => (
             <div
               key={i}
-              className="
-                border border-white/10
-                bg-zinc-900/40
-                backdrop-blur-sm
-                p-8
-                transition duration-300
-                hover:border-white/30
-                hover:-translate-y-1
-                hover:shadow-[0_0_40px_rgba(255,255,255,0.04)]
-              "
+              style={{ transitionDelay: inView ? `${i * 90}ms` : "0ms" }} // stagger
+              className={[
+                "border border-white/10 bg-zinc-900/40 backdrop-blur-sm p-8",
+                "transition-all duration-700 ease-out",
+                inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
+                "hover:border-white/30 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(255,255,255,0.04)]",
+              ].join(" ")}
             >
               <h3 className="text-lg font-semibold tracking-wide text-white mb-4">
                 {service.title}
               </h3>
-
-              <p className="text-sm text-white/60 leading-relaxed">
-                {service.text}
-              </p>
+              <p className="text-sm text-white/60 leading-relaxed">{service.text}</p>
             </div>
           ))}
         </div>
