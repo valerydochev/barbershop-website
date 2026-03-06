@@ -78,7 +78,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Desktop arrow (ВЪРНАТА КАКТО БЕШЕ) */}
+      {/* Desktop arrow*/}
       <a
         href="#services"
         className="hidden lg:flex absolute bottom-20 z-20

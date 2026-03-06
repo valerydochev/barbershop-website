@@ -1,6 +1,7 @@
 import Hero from "./components/Hero";
 import Navbar from "./Components/Navbar";
 import Services from "./components/Services";
+import GalerySection from "./components/GalerySection";
 
 export default function App() {
   return (
@@ -9,6 +10,7 @@ export default function App() {
       <main className="pt-16">
         <Hero />
         <Services />
+        <GalerySection />
       </main>
     </div>
   );
