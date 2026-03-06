@@ -9,11 +9,11 @@ export default function Hero() {
       <div className="absolute inset-0 opacity-[0.07] bg-[url('https://www.transparenttextures.com/patterns/asfalt-light.png')]" />
 
       {/* Desktop Watermark */}
-      <div className="pointer-events-none absolute hidden lg:block right-[-24px] top-1/2 -translate-y-1/2 select-none z-0">
-        <p className="font-black tracking-widest text-white/[0.10] text-[180px] xl:text-[220px] 2xl:text-[260px] leading-none">
+      <div className="pointer-events-none absolute hidden lg:block right-[-110px] xl:right-[-40px] 2xl:right-[-10px] top-1/2 -translate-y-1/2 select-none z-0">
+        <p className="font-black tracking-widest text-white/[0.10] text-[140px] xl:text-[200px] 2xl:text-[240px] leading-none">
           KUZEV
         </p>
-        <p className="font-black tracking-widest text-white/[0.10] text-[130px] xl:text-[170px] 2xl:text-[200px] leading-none -mt-2">
+        <p className="font-black tracking-widest text-white/[0.10] text-[96px] xl:text-[145px] 2xl:text-[180px] leading-none -mt-2">
           CUTS
         </p>
       </div>
@@ -23,7 +23,8 @@ export default function Hero() {
         <div
           className="min-h-[52vh] md:min-h-[80vh] lg:min-h-[520px]
                      flex flex-col items-start lg:flex-row lg:items-center
-                     pt-10 sm:pt-12 lg:pt-0"
+                     pt-10 sm:pt-12 lg:pt-0
+                     lg:pr-[280px] xl:pr-[380px] 2xl:pr-[430px]"
         >
           <div className="w-full sm:max-w-xl">
             
@@ -77,7 +78,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Desktop arrow */}
+      {/* Desktop arrow (ВЪРНАТА КАКТО БЕШЕ) */}
       <a
         href="#services"
         className="hidden lg:flex absolute bottom-20 z-20
@@ -109,7 +110,6 @@ export default function Hero() {
 
       {/* Fade към следващата секция */}
       <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-24 sm:h-28 bg-gradient-to-b from-transparent to-black" />
-
     </section>
   );
 }
