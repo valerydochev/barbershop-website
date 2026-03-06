@@ -22,10 +22,11 @@ export default function Hero() {
       <div className="relative z-10 mx-auto max-w-7xl px-6 h-full">
         <div
           className="min-h-[52vh] md:min-h-[80vh] lg:min-h-[520px]
-                     flex items-start lg:items-center
+                     flex flex-col items-start lg:flex-row lg:items-center
                      pt-10 sm:pt-12 lg:pt-0"
         >
           <div className="w-full sm:max-w-xl">
+            
             {/* Mobile Watermark */}
             <div className="pointer-events-none lg:hidden select-none mb-4 sm:mb-6">
               <p className="font-black tracking-widest text-white/[0.08] text-[46px] sm:text-[82px] md:text-[110px] leading-none">
@@ -40,6 +41,38 @@ export default function Hero() {
             <h1 className="text-[40px] sm:text-5xl md:text-6xl font-extrabold leading-[1.05]">
               За най-добрите мъжки прически в града, довери се на Kuzev Cuts!
             </h1>
+
+            {/* Mobile arrow */}
+            <div className="flex justify-center w-full lg:hidden">
+              <a
+                href="#services"
+                className="mt-10 flex flex-col items-center gap-2
+                           text-white/60 hover:text-white transition"
+                aria-label="Scroll to services"
+              >
+                <span className="text-xs tracking-[0.3em] uppercase">Скрол</span>
+
+                <div className="relative h-10 w-[1px] bg-white/30 overflow-hidden">
+                  <div className="absolute top-0 left-0 w-full h-4 bg-white animate-scrollLine"></div>
+                </div>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-5 h-5 animate-bounce"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </a>
+            </div>
+
           </div>
         </div>
       </div>
@@ -53,11 +86,9 @@ export default function Hero() {
              text-white/60 hover:text-white transition"
         aria-label="Scroll to services"
       >
-        {/* <span className="text-xs tracking-[0.28em] uppercase">Скрол</span> */}
-
         <span
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/
-                   hover:border-white/30 transition hover:bg-white/10"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20
+                   hover:border-white/40 transition hover:bg-white/10"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -74,35 +105,6 @@ export default function Hero() {
             />
           </svg>
         </span>
-      </a>
-      {/* Mobile arrow */}
-      <a
-        href="#services"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20
-                   flex flex-col items-center gap-2
-                   text-white/60 hover:text-white transition
-                   lg:hidden"
-      >
-        <span className="text-xs tracking-[0.3em] uppercase">Скрол</span>
-
-        <div className="relative h-10 w-[1px] bg-white/30 overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-4 bg-white animate-scrollLine"></div>
-        </div>
-
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-5 h-5 animate-bounce"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth="2"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M19 9l-7 7-7-7"
-          />
-        </svg>
       </a>
 
       {/* Fade към следващата секция */}
