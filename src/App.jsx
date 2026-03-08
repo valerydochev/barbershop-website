@@ -2,6 +2,7 @@ import Hero from "./components/Hero";
 import Navbar from "./Components/Navbar";
 import Services from "./components/Services";
 import GalerySection from "./components/GalerySection";
+import MapSection from "./components/MapSection";
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
         <Hero />
         <Services />
         <GalerySection />
+        <MapSection />
       </main>
     </div>
   );
