@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden min-h-[52vh] md:min-h-[80vh] lg:min-h-[520px]"
+      className="relative overflow-hidden min-h-[52vh] md:min-h-[80vh] lg:min-h-[520px] text-white"
     >
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-zinc-900 to-black" />
@@ -27,7 +27,6 @@ export default function Hero() {
                      lg:pr-[280px] xl:pr-[380px] 2xl:pr-[430px]"
         >
           <div className="w-full sm:max-w-xl">
-            
             {/* Mobile Watermark */}
             <div className="pointer-events-none lg:hidden select-none mb-4 sm:mb-6">
               <p className="font-black tracking-widest text-white/[0.08] text-[46px] sm:text-[82px] md:text-[110px] leading-none">
@@ -39,7 +38,7 @@ export default function Hero() {
             </div>
 
             {/* Heading */}
-            <h1 className="text-[40px] sm:text-5xl md:text-6xl font-extrabold leading-[1.05]">
+            <h1 className="text-[40px] sm:text-5xl md:text-6xl font-extrabold leading-[1.05] text-white">
               За най-добрите мъжки прически в града, довери се на Kuzev Cuts!
             </h1>
 
@@ -47,8 +46,7 @@ export default function Hero() {
             <div className="flex justify-center w-full lg:hidden">
               <a
                 href="#services"
-                className="mt-10 flex flex-col items-center gap-2
-                           text-white/60 hover:text-white transition"
+                className="mt-10 flex flex-col items-center gap-2 text-white/60 hover:text-white transition"
                 aria-label="Scroll to services"
               >
                 <span className="text-xs tracking-[0.3em] uppercase">Скрол</span>
@@ -73,23 +71,22 @@ export default function Hero() {
                 </svg>
               </a>
             </div>
-
           </div>
         </div>
       </div>
 
-      {/* Desktop arrow*/}
+      {/* Desktop arrow */}
       <a
         href="#services"
         className="hidden lg:flex absolute bottom-20 z-20
-             left-6 lg:left-[max(1.5rem,calc((100vw-80rem)/2+1.5rem))]
-             items-center gap-3
-             text-white/60 hover:text-white transition"
+                   left-6 lg:left-[max(1.5rem,calc((100vw-80rem)/2+1.5rem))]
+                   items-center gap-3
+                   text-white/60 hover:text-white transition"
         aria-label="Scroll to services"
       >
         <span
           className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20
-                   hover:border-white/40 transition hover:bg-white/10"
+                     hover:border-white/40 transition hover:bg-white/10"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

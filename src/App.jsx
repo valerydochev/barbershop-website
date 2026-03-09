@@ -1,21 +1,36 @@
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Navbar from "./Components/Navbar";
 import Services from "./components/Services";
 import GalerySection from "./components/GalerySection";
 import MapSection from "./components/MapSection";
 import Footer from "./components/Footer";
+import ServicesPage from "./components/ServicesPage";
 
-export default function App() {
+function Home() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <Navbar />
-      <main className="pt-16">
-        <Hero />
-        <Services />
-        <GalerySection />
-        <MapSection />
-        <Footer />
-      </main>
-    </div>
+    <>
+      <Hero />
+      <Services />
+      <GalerySection />
+      <MapSection />
+    </>
   );
 }
+
+function App() {
+  return (
+    <>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<ServicesPage />} />
+      </Routes>
+
+      <Footer />
+    </>
+  );
+}
+
+export default App;
