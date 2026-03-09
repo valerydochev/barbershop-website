@@ -3,6 +3,7 @@ import Navbar from "./Components/Navbar";
 import Services from "./components/Services";
 import GalerySection from "./components/GalerySection";
 import MapSection from "./components/MapSection";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <Services />
         <GalerySection />
         <MapSection />
+        <Footer />
       </main>
     </div>
   );
