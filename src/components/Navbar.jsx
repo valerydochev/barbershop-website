@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
+
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <img
             src={logo}
@@ -26,7 +26,6 @@ export default function Navbar() {
           </div>
         </Link>
 
-        {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8 text-sm tracking-wide">
           <Link to="/" className="text-white/70 hover:text-white transition">
             НАЧАЛО
@@ -45,7 +44,6 @@ export default function Navbar() {
           </a>
         </nav>
 
-        {/* Desktop button */}
         <a
           href="/#map"
           className="hidden md:flex items-center border border-white/20 px-4 py-2 text-xs tracking-widest uppercase text-white hover:bg-white hover:text-black transition"
@@ -53,7 +51,6 @@ export default function Navbar() {
           ВИЖ КЪДЕ
         </a>
 
-        {/* Burger */}
         <button
           type="button"
           onClick={() => setOpen((prev) => !prev)}
@@ -80,8 +77,7 @@ export default function Navbar() {
           </span>
         </button>
       </div>
-
-      {/* Mobile menu */}
+      
       {open && (
         <div className="md:hidden border-t border-white/10 bg-black/95 backdrop-blur">
           <nav className="px-6 py-6 flex flex-col gap-5 text-white">
