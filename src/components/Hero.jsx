@@ -23,12 +23,12 @@ export default function Hero() {
         <div
           className="min-h-[52vh] md:min-h-[80vh] lg:min-h-[520px]
                      flex flex-col items-start lg:flex-row lg:items-center
-                     pt-10 sm:pt-12 lg:pt-0
+                     pt-16 sm:pt-20 lg:pt-0
                      lg:pr-[280px] xl:pr-[380px] 2xl:pr-[430px]"
         >
           <div className="w-full sm:max-w-xl">
             {/* Mobile Watermark */}
-            <div className="pointer-events-none lg:hidden select-none mb-4 sm:mb-6">
+            <div className="pointer-events-none lg:hidden select-none mb-6 sm:mb-8 mt-2">
               <p className="font-black tracking-widest text-white/[0.08] text-[46px] sm:text-[82px] md:text-[110px] leading-none">
                 KUZEV
               </p>
@@ -49,7 +49,7 @@ export default function Hero() {
                 className="mt-10 flex flex-col items-center gap-2 text-white/60 hover:text-white transition"
                 aria-label="Scroll to services"
               >
-                <span className="text-xs tracking-[0.3em] uppercase">Скрол</span>
+                <span className="text-xs tracking-[0.3em] uppercase"></span>
 
                 <div className="relative h-10 w-[1px] bg-white/30 overflow-hidden">
                   <div className="absolute top-0 left-0 w-full h-4 bg-white animate-scrollLine"></div>
@@ -105,7 +105,7 @@ export default function Hero() {
         </span>
       </a>
 
-      {/* Fade към следващата секция */}
+      {/* Fade */}
       <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-24 sm:h-28 bg-gradient-to-b from-transparent to-black" />
     </section>
   );
