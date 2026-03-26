@@ -63,7 +63,7 @@ export default function Services() {
           {services.map((service, i) => (
             <div
               key={i}
-              style={{ transitionDelay: inView ? `${i * 90}ms` : "0ms" }} // stagger
+              style={{ transitionDelay: inView ? `${i * 90}ms` : "0ms" }}
               className={[
                 "border border-white/10 bg-zinc-900/40 backdrop-blur-sm p-8",
                 "transition-all duration-700 ease-out",
