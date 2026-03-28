@@ -117,7 +117,7 @@ export default function Navbar() {
                 setOpen(false);
                 scrollToFooter();
               }}
-              className="text-white/80 hover:text-white transition"
+              className="w-full text-left text-white/80 hover:text-white transition"
             >
               КОНТАКТИ
             </button>
