@@ -53,9 +53,11 @@ export default function MapSection() {
               href="https://www.google.com/maps/search/?api=1&query=ul.+General+Danail+Nikolaev+94,+Marasha,+Plovdiv"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center h-12 px-6 border border-white/25 rounded-xl
-                         text-sm font-semibold tracking-[0.18em] uppercase
-                         hover:bg-white hover:text-black transition"
+              className="inline-flex items-center justify-center h-12 px-6 rounded-xl 
+                bg-zinc-900 text-white border border-white/20 
+                text-sm font-semibold tracking-[0.18em] uppercase 
+                transition duration-300 
+                hover:bg-zinc-800 hover:border-white/40"
             >
               Отвори в Google Maps
             </a>

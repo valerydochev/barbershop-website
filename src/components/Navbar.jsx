@@ -5,6 +5,13 @@ import logo from "../assets/images/Logo.png";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
+  const scrollToFooter = () => {
+    const footer = document.getElementById("footer");
+    if (footer) {
+      footer.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -39,9 +46,9 @@ export default function Navbar() {
             ГАЛЕРИЯ
           </a>
 
-          <a href="/#map" className="text-white/70 hover:text-white transition">
+          <button onClick={scrollToFooter} className="text-white/70 hover:text-white transition">
             КОНТАКТИ
-          </a>
+          </button>
         </nav>
 
         <Link
@@ -105,13 +112,15 @@ export default function Navbar() {
               ГАЛЕРИЯ
             </a>
 
-            <a
-              href="/#map"
-              onClick={() => setOpen(false)}
+            <button
+              onClick={() => {
+                setOpen(false);
+                scrollToFooter();
+              }}
               className="text-white/80 hover:text-white transition"
             >
               КОНТАКТИ
-            </a>
+            </button>
 
             <Link
               to="/location"

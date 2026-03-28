@@ -3,7 +3,7 @@ import logo from "../assets/images/Logo.png";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-black text-white border-t border-white/10">
+    <footer id="footer" className="relative bg-black text-white border-t border-white/10">
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-white/5 via-transparent to-transparent"></div>
 
       <div className="max-w-7xl mx-auto px-6 py-20">
