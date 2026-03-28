@@ -44,12 +44,12 @@ export default function Navbar() {
           </a>
         </nav>
 
-        <a
-          href="/#map"
+        <Link
+          to="/location"
           className="hidden md:flex items-center border border-white/20 px-4 py-2 text-xs tracking-widest uppercase text-white hover:bg-white hover:text-black transition"
         >
           ВИЖ КЪДЕ
-        </a>
+        </Link>
 
         <button
           type="button"
@@ -113,13 +113,13 @@ export default function Navbar() {
               КОНТАКТИ
             </a>
 
-            <a
-              href="/#map"
+            <Link
+              to="/location"
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center border border-white/20 px-4 py-3 text-xs tracking-widest uppercase text-white hover:bg-white hover:text-black transition"
             >
               ВИЖ КЪДЕ
-            </a>
+            </Link>
           </nav>
         </div>
       )}

@@ -6,6 +6,7 @@ import GalerySection from "./components/GalerySection";
 import MapSection from "./components/MapSection";
 import Footer from "./components/Footer";
 import ServicesPage from "./components/ServicesPage";
+import LocationPage from "./components/LocationPage";
 
 function Home() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<ServicesPage />} />
+        <Route path="/location" element={<LocationPage />} />
       </Routes>
 
       <Footer />
