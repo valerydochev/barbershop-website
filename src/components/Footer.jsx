@@ -35,7 +35,7 @@ export default function Footer() {
           <div className="flex flex-col items-center md:items-end text-center md:text-right gap-4">
             <p className="text-white/70">📍 Пловдив, България, Данаил Николаев 94 MARASHA</p>
 
-            <p className="text-white/70">📞 +359 888 123 456</p>
+            <p className="text-white/70">📞 +359 89 030 4641</p>
 
             <a
               href="https://www.instagram.com/kuzev_cutz8/?hl=en"
